@@ -42,24 +42,30 @@ public protocol Resource {
  When passed to image view set methods, Kingfisher will try to download the target 
  image from the `downloadURL`, and then store it with the `cacheKey` as the key in cache.
  */
-public struct ImageResource: Resource {
-    /// The key used in cache.
-    public let cacheKey: String
-    
-    /// The target image URL.
-    public let downloadURL: URL
-    
-    /**
-     Create a resource.
-     
-     - parameter downloadURL: The target image URL.
-     - parameter cacheKey:    The cache key. If `nil`, Kingfisher will use the `absoluteString` of `downloadURL` as the key.
-     
-     - returns: A resource.
-     */
-    public init(downloadURL: URL, cacheKey: String? = nil) {
-        self.downloadURL = downloadURL
-        self.cacheKey = cacheKey ?? downloadURL.absoluteString
+
+@available(*, deprecated, message: "This type conflicts with `GeneratedAssetSymbols.ImageResource` in Swift 5.9. Renamed to avoid issues in the future.", renamed: "KF.ImageResource")
+public typealias ImageResource = KF.ImageResource
+
+public enum KF {
+    public struct ImageResource: Resource {
+        /// The key used in cache.
+        public let cacheKey: String
+        
+        /// The target image URL.
+        public let downloadURL: URL
+        
+        /**
+         Create a resource.
+         
+         - parameter downloadURL: The target image URL.
+         - parameter cacheKey:    The cache key. If `nil`, Kingfisher will use the `absoluteString` of `downloadURL` as the key.
+         
+         - returns: A resource.
+         */
+        public init(downloadURL: URL, cacheKey: String? = nil) {
+            self.downloadURL = downloadURL
+            self.cacheKey = cacheKey ?? downloadURL.absoluteString
+        }
     }
 }
 

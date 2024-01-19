@@ -32,7 +32,6 @@
 		D12E0CB51C47F9C100AC98AD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E0C911C47F91800AC98AD /* CollectionViewCell.swift */; };
 		D12E0CB61C47F9C100AC98AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E0C941C47F91800AC98AD /* ViewController.swift */; };
 		D1679A461C4E78B20020FD12 /* Kingfisher-watchOS-Demo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D1679A451C4E78B20020FD12 /* Kingfisher-watchOS-Demo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D1679A531C4E78B20020FD12 /* Kingfisher-watchOS-Demo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D1679A391C4E78B20020FD12 /* Kingfisher-watchOS-Demo.app */; };
 		D17176322047826A00EFC8C5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17176332047826A00EFC8C5 /* Kingfisher.framework */; };
 		D17176342047827300EFC8C5 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D17176332047826A00EFC8C5 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1717635204782AE00EFC8C5 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1717636204782AE00EFC8C5 /* Kingfisher.framework */; };
@@ -50,27 +49,9 @@
 			remoteGlobalIDString = D1679A441C4E78B20020FD12;
 			remoteInfo = "Kingfisher-watchOS-Demo Extension";
 		};
-		D1679A511C4E78B20020FD12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D1ED2D031AD2CFA600CFC3EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D1679A381C4E78B20020FD12;
-			remoteInfo = "Kingfisher-watchOS-Demo";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4BE2C9E61B381D42005313E5 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				D1679A531C4E78B20020FD12 /* Kingfisher-watchOS-Demo.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D12F2EEC1C4E7CF500B8054D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,12 +369,10 @@
 				D1ED2D081AD2CFA600CFC3EB /* Frameworks */,
 				D1ED2D091AD2CFA600CFC3EB /* Resources */,
 				D1ED2D511AD2D09F00CFC3EB /* Embed Frameworks */,
-				4BE2C9E61B381D42005313E5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D1679A521C4E78B20020FD12 /* PBXTargetDependency */,
 			);
 			name = "Kingfisher-Demo";
 			productName = "Kingfisher-Demo";
@@ -445,6 +424,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -560,11 +540,6 @@
 			isa = PBXTargetDependency;
 			target = D1679A441C4E78B20020FD12 /* Kingfisher-watchOS-Demo Extension */;
 			targetProxy = D1679A471C4E78B20020FD12 /* PBXContainerItemProxy */;
-		};
-		D1679A521C4E78B20020FD12 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D1679A381C4E78B20020FD12 /* Kingfisher-watchOS-Demo */;
-			targetProxy = D1679A511C4E78B20020FD12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -918,7 +893,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = T499X543T7;
 				INFOPLIST_FILE = "Demo/Kingfisher-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onevcat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -934,7 +909,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = T499X543T7;
 				INFOPLIST_FILE = "Demo/Kingfisher-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onevcat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
